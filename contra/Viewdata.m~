@@ -1,0 +1,23 @@
+[A, map] = imread('data/Boson_Capture1_1.tiff');
+
+if ~isempty(map)
+   A = ind2rgb(A,
+else
+    
+end
+
+A1 = A - min(min(A));
+
+
+for m = 1:500:5000
+    A2 = A1*m;
+    figure(m)
+    image(A2)
+end
+
+% figure(1)
+% image(A);
+% figure(2);
+% image(A1);
+% figure(3);
+% image(A2);
